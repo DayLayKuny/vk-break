@@ -1,20 +1,211 @@
-i{
-    font-style: unset;
-    font-size: 1em;
-    animation: blink 1100ms linear infinite;
+/* .all-console { */
+    /* width: 500px;
+    height: 500px; */
+    /* box-shadow: -3px 0 0 0 rgb(255, 255, 255), 3px 0 0 0 rgb(255, 255, 255), 0 0px 0 0 rgb(255, 255, 255), 0 3px 0 0 rgb(255, 255, 255); */
+    /* text-align: center;
 }
 
-@keyframes blink {
-    49% {
-        opacity: 1;
+.top {
+    background-color: white;
+    width: 100%;
+    height: 20px;
+    color: black;
+    font-family: Consolas, monaco, monospace;
+}
+
+.top p{
+    text-align: left;
+    margin-left: 10px;
+    font-size: 10px;
+}
+
+.typewriter {
+    width: 22ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 1em;
+    color: white;
+  } */
+  
+  @keyframes typing {
+    from {
+      width: 0
     }
+  }
+      
+  @keyframes blink {
     50% {
-        opacity: 0;
+      border-color: transparent
     }
-    89% {
-        opacity: 0;
-    }
-    90% {
-        opacity: 1;
-    }
+  }
+
+.cnss { background-color: #0d1d1c;
+    color: #848a93;
+    overflow: hidden;
+    font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+    font-size: 11px;
+    width: 100%;
+    height: 357px;
+    padding: 2px 8px;
+    float: right;
+    border-left: 1px solid #081514;
+    -webkit-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 2px rgb(6 33 63 / 13%);
+    -moz-box-shadow: 0 1px 2px rgba(6,33,63,.13);
+    box-shadow: 0 1px 2px rgb(6 33 63 / 13%);
+    overflow-x: hidden;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    line-height: 12px;
+    opacity: .6;
+    border-right: 1px solid #081514;
+    border-bottom: 1px solid #081514;
+    border-radius: 0 0 3px 3px;
+    position: relative;
+    animation: typing 15s steps(22);
+}
+.teraam {
+    color: #b59a07;
+}
+.cnss:after {
+    content: "_";
+    opacity: 1;
+    animation: cursor 1s infinite
+}
+.teraame {
+    color: #d6d5d5;
+}
+
+.style1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:
+    rgb(255 255 255 / 0%);
+    left: 0; 
+    right: 0; 
+    top: 0; 
+    bottom: 0;
+}
+
+.st2 {
+    white-space: pre;
+    overflow: hidden;
+    margin: 9px 0 0px 8px;
+    font-size: 100%;
+    width: 100%;
+}
+
+.st3 {
+    white-space: pre;
+    overflow: hidden;
+    margin: 
+    0px 0 0px 8px;
+    font-size: 100%;
+    width: 100%;
+}
+
+.st4 {
+    white-space: pre;
+    overflow: hidden;
+    margin: 
+    0px 0 0px 8px;
+    font-size: 100%;
+    width: 100%;
+}
+
+.st5 {
+    white-space: pre;
+    overflow: hidden;
+    margin: 
+    0px 0 0px 8px;
+    font-size: 100%;
+    width: 100%;
+}
+
+.st6 {
+    white-space: pre;
+    overflow: hidden;
+    margin: 
+    0px 0 0px 8px;
+    font-size: 100%;
+    width: 100%;
+}
+
+.st7 {
+    white-space: pre;
+    overflow: hidden;
+    margin: 0px 0 0px 8px;
+    font-size: 100%;
+    width: 100%;
+}
+
+.st8 {
+    white-space: pre;
+    overflow: hidden;
+    margin: 0px 0 0px 8px;
+    font-size: 100%;
+    width: 100%;
+}
+
+.st10 {
+    white-space: pre;
+    overflow: hidden;
+    margin: 0px 0 0px 8px;
+    font-size: 100%;
+    width: 100%;
+}
+
+.st9 {
+    white-space: pre;
+    overflow: hidden;
+    margin: 0px 0 0px 8px;
+    font-size: 100%;
+    width: 100%;
+}
+
+.st11 {
+    white-space: pre;
+    overflow: hidden;
+    margin: 0px 0 0px 8px;
+    font-size: 100%;
+    width: 100%;
+}
+
+.cns {
+    background-color: #0d1d1c;
+    color: #848a93;
+    overflow: hidden;
+    font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+    font-size: 11px;
+    width: 100%;
+    height: 357px;
+    padding: 2px 8px;
+    float: right;
+    border-left: 1px solid #081514;
+    -webkit-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 2px rgb(6 33 63 / 13%);
+    -moz-box-shadow: 0 1px 2px rgba(6,33,63,.13);
+    box-shadow: 0 1px 2px rgb(6 33 63 / 13%);
+    overflow-x: hidden;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    line-height: 12px;
+    opacity: .6;
+    border-right: 1px solid #081514;
+    border-bottom: 1px solid #081514;
+    border-radius: 0 0 3px 3px;
+    position: relative;
 }
