@@ -1,0 +1,20 @@
+i{
+    font-style: unset;
+    font-size: 1em;
+    animation: blink 1100ms linear infinite;
+}
+
+@keyframes blink {
+    49% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    89% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+}

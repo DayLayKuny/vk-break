@@ -1,0 +1,136 @@
+.header-section {
+  height: 120vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../img/Desktop1.png);
+}
+.header-section-text {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.texts p::selection {
+  background-color: rgb(176, 92, 255);
+}
+
+.texts b::selection {
+  background-color: rgb(128, 80, 173);
+}
+
+.texts {
+  max-width: 600px;
+  min-width: 150px;
+}
+@media screen and (max-width: 500px) {
+  .header-section {
+    height: 140vh;
+  }
+}
+@media screen and (max-width: 782px) {
+  .header {
+    font-size: 35px;
+  }
+}
+.done-div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.done-div div {
+  display: flex;
+}
+.done-div div p {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.done-div div p::selection {
+  background-color: green;
+}
+
+.donefa {
+  height: 25px;
+  width: 25px;
+  transition: 0.5s;
+}
+
+.donefa::selection {
+  background-color: rgb(176, 92, 255);
+}
+
+@media screen and (max-height: 760px) {
+  .header-section {
+    height: 130vh;
+  }
+}
+@media screen and (max-height: 660px) {
+  .header-section {
+    height: 200vh;
+  }
+}
+
+.tesxts {
+  height: 10vh;
+  display: grid;
+  place-items: center;
+}
+
+
+.header {
+  flex-wrap: wrap;
+}
+
+.header {
+  width: 750px;
+  animation: typing 4s, 0.5s;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 50px;
+  font-family: 'Gilroy-Bold', sans-serif;
+}
+
+.header1 {
+  width: 750px;
+  animation: typing 4s, 0.5s;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 50px;
+  font-family: 'Gilroy-Bold', sans-serif;
+  flex-wrap: wrap;
+}
+
+.header::selection {
+  background-color: rgb(176, 92, 255);
+}
+
+.header1::selection {
+  background-color: rgb(176, 92, 255);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@media screen and (max-width: 830px){
+  .header1, .header {
+    width: 100%;
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 440px){
+  .header1, .header {
+    font-size: 25px;
+  }
+}

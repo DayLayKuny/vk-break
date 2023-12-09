@@ -1,0 +1,100 @@
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+
+.amount-info {
+    text-align: center;
+    color: white;
+    padding: 15px 0 15px 0;
+    margin-bottom: 10px;
+}
+
+.divp {
+    text-align: center;
+    color: white;
+    padding: 15px 0 15px 0;
+    margin-bottom: 10px;
+}
+
+.all-amount {
+    background-color: #020203FF;
+    padding: 50px 0 50px 0;
+    width: 100%;
+}
+
+.accounts-amount {
+    color: white;
+    margin-left: 15px;
+    text-align: center;
+    box-shadow: -5px 0 0 0 rgb(255, 255, 255), 5px 0 0 0 rgb(255, 255, 255), 0 -5px 0 0 rgb(255, 255, 255), 0 5px 0 0 rgb(255, 255, 255);
+    padding: 20px;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 380px) {
+    .accounts-amount {
+        margin-left: -10px;
+        padding: 10px;
+   }
+}
+
+.accounts-amount:hover {
+    color: back;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-width: 390px;
+}
+
+.accounts-amount h6 {
+    font-size: larger;
+    font-weight: bold;
+    
+}
+
+.divp p::selection {
+    background-color: white;
+    color: black;
+}
+
+
+.accounts-amount h5 {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-weight: bolder;
+}
+
+.accounts-amount p {
+    color: rgb(104, 104, 104);
+}
+
+.accounts-amount p::selection {
+    background-color: black;
+    color: white;
+}
+
+.amount-info h3 {
+    font-family: 'Gilroy-Bold', sans-serif;
+}
+
+.amount-info h3::selection {
+    background-color: white;
+    color: black;
+}
+
+.accounts-amount h5::selection {
+    background-color: black;
+    color: white;
+}
+
+.accounts-amount h6::selection {
+    background-color: black;
+    color: white;
+}
+
+.accounts-amount:hover {
+    color: black;
+    background-color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}

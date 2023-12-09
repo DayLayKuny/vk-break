@@ -1,0 +1,159 @@
+.all-policy {
+    width: 100%;
+    background-color: #020203FF;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    text-align: center;
+    flex-wrap: wrap;
+    min-width: 400px;
+}
+
+.head-inform h1 {
+    font-family: 'Gilroy-Bold', sans-serif;
+    color: white;
+    margin-top: 50px;
+}
+
+.head-inform h1::selection {
+    color: black;
+    background-color: white;
+}
+
+.head-inform h4 {
+    color: #838383;
+}
+
+.head-inform h4::selection {
+    color: black;
+    background-color: white;
+}
+
+.head-inform h6 {
+    color: #707070;
+    margin-top: 30px;
+}
+
+.head-inform h6::selection {
+    color: black;
+    background-color: white;
+}
+
+.head-inform {
+    padding: 20px;
+}
+
+.main-info {
+    padding: 20px 50px;
+    flex-wrap: wrap;
+    background-color: #020203FF;
+    height: 100%;
+}
+
+@media screen and (max-width: 550px) {
+    .main-info {
+        padding: 20px;
+    }
+    .head-inform {
+        padding: 30px;
+    }
+    .head-inform h1 {
+        font-size: 15px;
+    }
+    .main-info h5 {
+        font-size: 15px;
+    }
+}
+
+.main-info p {
+    font-family: 'Gilroy-Bold', sans-serif;
+    color: rgb(255, 0,255);
+    margin-top: 20px;
+}
+
+.main-info p::selection {
+    color: rgb(55, 0, 55);
+    background-color: rgb(255, 0, 255);
+}
+
+.main-info span::selection {
+    color: black;
+    background-color: white;
+}
+
+.main-info span {
+    margin: 10px;
+    transition: 1s;
+}
+
+.main-info span b {
+    color: #353535;
+    transition: 1s;
+}
+
+.main-info span b::selection {
+    color: rgb(102, 102, 102);
+    background-color: rgb(172, 172, 172);
+}
+
+.main-info span b:hover {
+    color: #838383;
+}
+
+#redspan {
+    transition: 1s;
+}
+
+#redspan:hover {
+    color: red;
+}
+
+#redspan::selection {
+    color: black;
+    background-color: rgb(255, 0, 0);
+}
+
+.main-info h5 {
+    font-family: 'Gilroy-Bold', sans-serif;
+    color: white;
+    padding: 30px;
+}
+
+.main-info h5::selection {
+    color: black;
+    background-color: white;
+}
+
+.ulul {
+    color: white;
+}
+
+ul {
+    color: #353535;
+    transition: 1s;
+}
+
+li::selection {
+    color: black;
+    background-color: white;
+}
+
+ul:hover {
+    color: #838383;
+}
+
+.updatespan {
+    color: #353535;
+}
+
+a {
+    color: rgb(255, 0, 255);
+}
+
+a::selection {
+    color: rgb(55, 0, 55);
+    background-color: rgb(255, 0, 255);
+}
+
+.main-info span:hover {
+    color: #707070;
+}

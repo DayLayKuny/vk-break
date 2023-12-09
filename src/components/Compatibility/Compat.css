@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+.compat-item h6 {
+    color: white;
+    font-family: 'Gilroy-Bold', sans-serif;
+}
+
+.maskfa {
+    height: 50px;
+    width: 50px;
+    color: white;
+}
+
+.lefter {
+    margin-left: 1%;
+}
+
+.compat-item {
+    min-width: 150px;
+    max-width: 240px;
+    text-align: center;
+    box-shadow: -3px 0 0 0 rgb(255, 255, 255), 3px 0 0 0 rgb(255, 255, 255), 0 -3px 0 0 rgb(255, 255, 255), 0 3px 0 0 rgb(255, 255, 255);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px 20px 20px 20px;
+}
+
+
+
+.all-compat {
+    padding: 50px 0 50px 0;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #020203FF;
+}
+
+.compat-item p {
+    color: white;
+}
+
+.compat-item p::selection {
+    background-color: white;
+    color: black;
+}
+
+.compat-item h6::selection {
+    background-color: white;
+    color: black;
+}

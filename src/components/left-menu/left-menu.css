@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+#menu {
+  background: #161B22FF;
+  color: #fff;
+}
+#menu-open-btn {
+  background: #040b58ff;
+  height: 40px;
+  font-size: 25px;
+  display: none;
+}
+.close-btn {
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 30px;
+}
+.left-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.left-menu-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+#left-menu-links {
+  display: flex;
+  align-items: center;
+}
+.auth-btn {
+  height: 45px;
+  border: none;
+  border-radius: 12px;
+  max-width: 260px;
+}
+@media screen and (max-width: 991px) {
+  #menu-open-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

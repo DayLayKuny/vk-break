@@ -1,0 +1,47 @@
+.all-cookies {
+    width: 100%;
+    background-color: #020203FF;
+    padding: 120px 50px 50px 50px;
+}
+
+@media screen and (max-width: 600px) {
+    .all-cookies {
+        padding: 100px 10px 50px 10px;
+    }
+}
+
+.headercookies h4 {
+    color: rgb(255, 0, 255);
+    font-family: 'Gilroy-Bold', sans-serif;
+    text-align: center;
+}
+
+.headercookies h3 {
+    color: white;
+    text-align: center;
+}
+
+.maincookies h5{
+    font-family: 'Gilroy-Bold', sans-serif;
+    color: rgb(255, 0, 255);
+    font-size: small;
+    padding: 20px 0;
+}
+
+.maincookies {
+    padding-top: 50px;
+}
+
+.maincookies p {
+    color: #303030;
+    transition: 1s;
+}
+
+.maincookies p:hover {
+    color: #606060;
+    cursor: pointer;
+}
+
+.maincookies p b {
+    color: #909090;
+}

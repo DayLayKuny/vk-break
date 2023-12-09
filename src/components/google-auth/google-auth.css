@@ -1,0 +1,10 @@
+.google-auth-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.google-icon {
+    font-size: 25px;
+}

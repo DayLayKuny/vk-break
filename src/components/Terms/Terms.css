@@ -1,0 +1,53 @@
+.all-terms {
+    width: 100%;
+    background-color: #020203FF;
+    padding: 100px 50px 50px 50px;
+}
+
+@media screen and (max-width: 600px) {
+    .all-terms {
+        padding: 100px 10px 50px 10px;
+    }
+    ol li {
+        margin-left: 20px;
+    }
+}
+
+.spn span {
+    color: rgb(255, 0, 255);
+    font-family: 'Gilroy-Bold', sans-serif;
+}
+
+.spn {
+    text-align: center;
+}
+
+.headerterms h5 {
+    color: #909090;
+    padding: 20px 0;
+}
+
+.headerterms h6 {
+    color: #606060;
+    padding: 10px 0;
+}
+
+.headerterms p {
+    color: #353535;
+}
+
+ol li {
+    color: rgb(255, 0, 255);
+    font-family: 'Gilroy-Bold', sans-serif;
+    padding: 10px;
+}
+
+ol p {
+    color: #606060;
+    transition: 1s;
+}
+
+ol p:hover {
+    color: #909090;
+    cursor: pointer;
+}

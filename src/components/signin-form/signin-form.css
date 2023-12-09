@@ -1,0 +1,49 @@
+.auth-form {
+    width: 450px;
+    background: #161B22FF;
+    text-align: center;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap: 15px;
+    border: 1px solid #30363DFF;
+    animation: anim .5s;
+    transition: all ease .5s;
+}
+@keyframes anim {
+    from {
+        transform: scale(0.7);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.auth-form input {
+    height: 50px;
+    border: none;
+    background: #0D1117FF;
+    border-radius: 12px;
+    border: 1px solid #30363DFF;
+    outline: none;
+    color: #dedddd;
+    padding: 15px;
+}
+.auth-form  button {
+    height: 45px;
+    border: none;
+    border-radius: 12px;
+}
+.form-type {
+    color: #757575FF;
+}
+
+.form-type:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 480px){
+   .auth-form    {
+        width: 100%;
+    }
+}

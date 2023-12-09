@@ -1,0 +1,205 @@
+.all-price {
+    width: 100%;
+    background-color: #020203FF;    
+}
+
+.amount-info {
+    text-align: center;
+    color: white;
+    padding: 15px 0 15px 0;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+.amount-info1 {
+    text-align: center;
+    color: white;
+    padding: 20px 100px 20px 100px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+.amount-info1 h3 {
+    font-family: 'Gilroy-Bold', sans-serif;
+    margin-bottom: 20px; 
+}
+
+.divp {
+    text-align: center;
+    color: white;
+    padding: 15px 0 15px 0;
+    margin-bottom: 10px;
+}
+
+.all-amount {
+    padding: 50px 0 50px 0;
+    width: 100%;
+    
+}
+
+.accounts-amount {
+    color: white;
+    margin-left: 15px;
+    text-align: center;
+    box-shadow: -5px 0 0 0 rgb(255, 255, 255), 5px 0 0 0 rgb(255, 255, 255), 0 -5px 0 0 rgb(255, 255, 255), 0 5px 0 0 rgb(255, 255, 255);
+    padding: 20px;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 380px) {
+    .accounts-amount {
+        margin-left: -10px;
+        padding: 10px;
+   }
+}
+
+.accounts-amount:hover {
+    color: back;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-width: 390px;
+}
+
+.accounts-amount h6 {
+    font-size: larger;
+    font-weight: bold;
+    
+}
+
+.divp p::selection {
+    background-color: white;
+    color: black;
+}
+
+
+.accounts-amount h5 {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-weight: bolder;
+}
+
+.accounts-amount p {
+    color: rgb(104, 104, 104);
+}
+
+.accounts-amount p::selection {
+    background-color: black;
+    color: white;
+}
+
+.amount-info h3 {
+    font-family: 'Gilroy-Bold', sans-serif;
+}
+
+.amount-info h3::selection {
+    background-color: white;
+    color: black;
+}
+
+.accounts-amount h5::selection {
+    background-color: black;
+    color: white;
+}
+
+.accounts-amount h6::selection {
+    background-color: black;
+    color: white;
+}
+
+.accounts-amount:hover {
+    color: black;
+    background-color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.guarantees {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.guarantees p {
+    color: white;
+    text-align: center;
+}
+
+.donefar {
+    font-size: 25px;
+    color: green;
+    margin: 10px;
+    width: 90%;
+}
+
+.guaritem {
+    width: 300px;
+    height: 250px;
+    margin: 10px;
+    box-shadow: -5px 0 0 0 rgb(255, 255, 255), 5px 0 0 0 rgb(255, 255, 255), 0 -5px 0 0 rgb(255, 255, 255), 0 5px 0 0 rgb(255, 255, 255);
+    transition: 0.5s;
+    padding: 10px;
+}
+
+.guaritem:hover {
+    box-shadow: 7px 7px 7px white;
+}
+
+.questions {
+    padding: 20px;
+    justify-content: center;
+}
+
+.all-quesitems {
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 500px;) {
+    .quesitem {
+        height: 200px;
+    }
+}
+
+.questions h4{
+    color: white;
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.questions h5 {
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.questions p {
+    color: #8d8d8d;
+    text-align: center;
+}
+
+.quesitem b {
+    color: #fff;
+}
+
+.quesitem {
+    width: 300px;
+    height: 350px;
+    margin: 10px 10px 80px 10px;
+    transition: 0.5s;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+.quesitem:hover {
+    border-radius: 40px;
+    box-shadow: 7px 7px 7px white;
+    border: 1px solid black;
+}

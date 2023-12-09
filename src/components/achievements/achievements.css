@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+.achievements {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.achievement {
+  display: grid;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 250px;
+}
+.achievement p {
+    font-size: 25px;
+    font-family: 'Gilroy-Bold', sans-serif;
+    color: #7D35D7FF;
+}

@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+.all-leadership {
+    width: 100%;
+    background-color: #020203FF;
+    padding: 100px 50px 50px 50px;
+}
+
+.headership {
+    text-align: center;
+}
+
+.pinkp {
+    color: rgb(255, 0, 255);
+    font-family: 'Gilroy-Bold', sans-serif;
+    text-align: center;
+}
+
+.headership h2 {
+    color: white;
+}
+
+.headership h4 {
+    color: #909090;
+}
+
+.headership span {
+    color: #303030;
+}
+
+.algorithm {
+    margin-top: 50px;
+}
+
+.ulli{
+    padding-left:  50px;
+    color: #909090;
+}
+
+.donefa {
+    margin-right: 10px;
+    color: green;
+}
+
+.databaseadmin p a {
+    text-decoration: none;
+    color: rgb(155, 0, 155);
+}
+
+.databaseadmin {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.warnfa {
+    color: red;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+.warning p {
+    color: white;
+    transition: 1s;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.warning p:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.end p {
+    color: #909090;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .ulli{
+        padding-left:  30px;
+    }
+    .all-leadership {
+        padding-left: 20px;
+    }
+}
