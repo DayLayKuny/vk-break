@@ -4,11 +4,11 @@ import Alert from "../alert/Alert";
 import Console from "./nothing/Console";
 
 const Loading = () => {
-  const [load, setLoad] = useState(true);
+  const [load, setLoad] = useState(false);
 
-  // setInterval(() => {
-  //   setLoad(false);
-  // }, "50000");
+  setInterval(() => {
+    setLoad(false);
+  }, "50000");
 
   return (
     <>
