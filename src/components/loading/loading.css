@@ -5,13 +5,16 @@
   background: none;
   z-index: 5;
   display: flex;
-  justify-content: center;
+  gap: 25px;
+  align-items: center;
+  flex-direction: column;
   background: black;
 }
 
 .loader {
   margin: 50px;
 }
+
 
 /* 
 .loader {

@@ -11,7 +11,7 @@ import HeaderSection from "../../components/header-section/HeaderSection";
 
 const HomePage = ({openAuth, onOpenAuth}) => {
   const [openAlert, setOpenAlert] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   return (
     <>

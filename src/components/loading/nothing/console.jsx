@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
-import "./Console.css"
+import "./console.css";
 export default Console;
 
-function Console () {
-    let empty = []
-    let myShow = ["Host Name:                 USER",
+function Console() {
+  let empty = [];
+  let myShow = [
+    "Host Name:                 USER",
     ">OS Name:                   Microsoft Windows 8.1 Pro",
     ">OS Version:                6.3.9600 N/A Build 9600",
     ">OS Manufacturer:           Microsoft Corporation",
@@ -38,49 +39,42 @@ function Console () {
     "Logon Server:              MicrosoftAccount<",
     "Hotfix(s):                 170 Hotfix(s) Installed.",
     "                       [01]: KB2899189_Microsoft-Windows-CameraCodec-Package",
-                            ">Network Card(s):           2 NIC(s) Installed.",
-                            "                       [01]: Realtek PCIe FE Family Controller",
+    ">Network Card(s):           2 NIC(s) Installed.",
+    "                       [01]: Realtek PCIe FE Family Controller",
     "                               Connection Name: Ethernet",
-                            "                               Status:          Media disconnected",
-                                    "                      [02]: Ralink RT3290 802.11bgn Wi-Fi Adapter",
-                                    "                                Connection Name: Wi-Fi",
-                            "                                DHCP Enabled:    Yes",
-                                    "                               DHCP Server:     192.168.1.1<",
-                                    "                                IP address(es)",
-                                    "                               [01]: 192.168.1.12",
-                                    "                                [02]: fe80::94fe:68f6:1de6:669c",
-                                    "                                [03]: 2a02:2a56:1cff::4",
-                                    " Hyper-V Requirements:      VM Monitor Mode Extensions: Yes",
-                                    "                        Virtualization Enabled In Firmware: No",
+    "                               Status:          Media disconnected",
+    "                      [02]: Ralink RT3290 802.11bgn Wi-Fi Adapter",
+    "                                Connection Name: Wi-Fi",
+    "                                DHCP Enabled:    Yes",
+    "                               DHCP Server:     192.168.1.1<",
+    "                                IP address(es)",
+    "                               [01]: 192.168.1.12",
+    "                                [02]: fe80::94fe:68f6:1de6:669c",
+    "                                [03]: 2a02:2a56:1cff::4",
+    " Hyper-V Requirements:      VM Monitor Mode Extensions: Yes",
+    "                        Virtualization Enabled In Firmware: No",
     "                        Second Level Address Translation: Yes",
-    "                     Data Execution Prevention Available: Yes" ]
-    const justShow = () => {
-        for (let i = 0; i < myShow.length; i++) {
-            setTimeout(() => {
-                (empty[i] = myShow[i]);
-            }, i * 1000);
-        }
-    };
+    "                     Data Execution Prevention Available: Yes",
+  ];
 
-  
-
-    return (
-        <div className="all-console">
-            <div className="top">
-                <p>cmd_{'<'}</p>
-            </div>
-            <div className="consoleMain">
-                <pre>
-                    {
-                        myShow.map(el => {
-                            setTi
-                            return (
-                                <p>{el}</p>
-                            )
-                        })
-                    }
-                </pre>
-            </div>
+  return (
+    <div className="all-console">
+      <div className="top">
+        <p>cmd_{"<"}</p>
+      </div>
+      <div className="consoleMain">
+        <div className="console-text">
+          {
+            // setInterval(() => {
+            //   return <p>{'hello'}</p>
+            // }, '1000')
+          }
+          {myShow.map((el, index) => {
+            return <p style={{ color: "green" }}>{el}</p>;
+          })}
         </div>
-    )
+      </div>
+      <span class="loader"></span>
+    </div>
+  );
 }
