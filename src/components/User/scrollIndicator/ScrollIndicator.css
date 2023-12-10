@@ -1,0 +1,17 @@
+/* ScrollIndicator.css */
+
+.scroll-indicator-container {
+    position: fixed;
+    top: 0;
+    left: 0; /* Update to position on the left */
+    height: 100vh;
+    width: 8px;
+    background-color: #ccc; /* Grey color */
+  }
+  
+  .scroll-indicator {
+    width: 100%;
+    background-color: #000; /* Black color */
+    transition: height 0.01s ease-in-out;
+  }
+  

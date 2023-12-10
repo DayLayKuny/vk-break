@@ -73,7 +73,6 @@ function Console () {
                 <pre>
                     {
                         myShow.map(el => {
-                            setTi
                             return (
                                 <p>{el}</p>
                             )
