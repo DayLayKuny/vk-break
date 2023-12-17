@@ -1,0 +1,9 @@
+.order {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+.all-orders {
+    width: 80%;
+}

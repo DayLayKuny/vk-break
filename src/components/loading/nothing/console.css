@@ -1,6 +1,6 @@
 .all-console {
-  width: 80%;
-  height: 100vh;
+  width: 600px;
+  height: 550px;
   box-shadow: -3px 0 0 0 rgb(255, 255, 255), 3px 0 0 0 rgb(255, 255, 255),
     0 0px 0 0 rgb(255, 255, 255), 0 3px 0 0 rgb(255, 255, 255);
   text-align: center;
@@ -30,7 +30,7 @@
   position: absolute;
   width: 100%;
   top: 0px;
-  animation: console_anim 3s infinite steps(50, end);
+  animation: console_anim 1s infinite steps(10, end);
   transition: all ease-out;
 }
 .loader {
@@ -51,13 +51,13 @@
 
 .consoleMain .console-text p {
   width: 600px;
-  animation: typing 3s steps(75), blink 0.1s step-end infinite alternate;
+  animation: typing 3s steps(20), blink 0.1s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
 }
 
 .consoleMain {
-  height: 95%;
+  height: 530px;
   overflow-y: hidden;
   width: 600px;
   flex-wrap: wrap;

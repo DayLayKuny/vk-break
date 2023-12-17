@@ -1,0 +1,72 @@
+.settings-panel {
+    position: fixed;
+    z-index: 5;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-settings {
+    height: 400px;
+    z-index: 5;
+    width: 400px;
+    background: #222222FF;
+    border: 3px solid #3E3E3EFF;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 15px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    animation: settings-anim 0.5s;
+}
+@keyframes settings-anim {
+    from {
+        transform: scale(0.7);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.user-settings input {
+    height: 45px;
+    width: 250px;
+    border: 1px solid #3E3E3EFF;
+    background: #222222FF;
+    border-radius: 10px;
+    padding: 15px;
+    color: #fff;
+}
+.user-settings button {
+    height: 45px;
+    border: none;
+    color: #fff;
+    background: rgb(2, 92, 2);
+    border-radius: 10px;
+}
+.icon-box {
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    left: 15px;
+    bottom: 0px;
+}
+.settings-icon {
+    color: #333;
+    font-size: 26px;
+}
+.prf-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 2px solid #3E3E3EFF;
+    padding: 5px;
+}
+input[type="file"] {
+    display: none;
+}

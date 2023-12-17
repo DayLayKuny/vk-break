@@ -81,17 +81,15 @@
 }
 
 
-.header {
-  flex-wrap: wrap;
-}
 
 .header {
+  flex-wrap: wrap;
   width: 750px;
   animation: typing 4s, 0.5s;
   white-space: nowrap;
   overflow: hidden;
   font-size: 50px;
-  font-family: 'Gilroy-Bold', sans-serif;
+  font-family: "Press Start 2P";
 }
 
 .header1 {
@@ -100,7 +98,7 @@
   white-space: nowrap;
   overflow: hidden;
   font-size: 50px;
-  font-family: 'Gilroy-Bold', sans-serif;
+  font-family: "Press Start 2P";
   flex-wrap: wrap;
 }
 
