@@ -3,7 +3,7 @@ import "./auth-form.css";
 import SignInForm from "../signin-form/SignInForm";
 import SignUpForm from "../signup-form/SignUpForm";
 
-const AuthForm = ({ onClose, openAuth }) => {
+const AuthForm = ({ onClose, openAuth, onAddData }) => {
   const [showSignIn, setShowSignIn] = useState(false);
 
   return (
@@ -13,9 +13,9 @@ const AuthForm = ({ onClose, openAuth }) => {
           className="auth-form-panel"
         >
           {showSignIn ? (
-            <SignUpForm onSwitch={() => setShowSignIn(!showSignIn)} />
+            <SignUpForm onSwitch={() => setShowSignIn(!showSignIn)}/>
           ) : (
-            <SignInForm onSwitch={() => setShowSignIn(!showSignIn)} />
+            <SignInForm onSwitch={() => setShowSignIn(!showSignIn)}/>
           )}
         </div>
       </div>

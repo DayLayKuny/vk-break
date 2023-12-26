@@ -1,7 +1,8 @@
 import React from "react";
 import "./order.css";
 import { FaVk } from "react-icons/fa6";
-import { FaRegClock } from "react-icons/fa6";
+import { HiMiniShieldCheck } from "react-icons/hi2";
+import { HiMiniEye } from "react-icons/hi2";
 
 const Order = ({ id, url }) => {
   return (
@@ -11,9 +12,13 @@ const Order = ({ id, url }) => {
         <FaVk />
         {url}
       </p>
-      <p style={{ color: "orange" }}>
-        <FaRegClock />
-      </p>
+      <span style={{ color: "green" }}>
+        <HiMiniShieldCheck />
+        Успешно
+      </span>
+      <button className="view-btn">
+        Посмотреть <HiMiniEye />
+      </button>
     </div>
   );
 };

@@ -15,7 +15,7 @@ const UrlSearch = ({onHacking, onError}) => {
   };
 
   const onSubmit = (data) => {
-    isVKUrlValid(data.searchUrl) ? onHacking() : onError()
+    isVKUrlValid(data.searchUrl) ? onHacking(data.searchUrl) : onError()
   };
 
   return (

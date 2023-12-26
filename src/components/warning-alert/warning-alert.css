@@ -1,0 +1,29 @@
+.warning-alert {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  background: orange;
+  top: -200px;
+  padding: 15px;
+  animation: warning-anim 4.5s;
+}
+@keyframes warning-anim {
+  0% {
+    top: -200px;
+  }
+  25% {
+    top: 0px;
+  }
+  50% {
+    top: 0px;
+  }
+  75% {
+    top: 0px;
+  }
+  100% {
+    top: -200px;
+  }
+}

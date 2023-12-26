@@ -1,12 +1,35 @@
 import React, { useState } from "react";
 import "./user-settings.css";
 import { LuImagePlus } from "react-icons/lu";
+import axios from "axios";
 
-const UserSettings = ({ userName, onClose }) => {
-  const [profileImage, setProfileImage] = useState(
-    "https://www.011global.com/Account/Slices/user-anonymous.png"
-  );
+const UserSettings = ({ id, userName, profile_img, onClose }) => {
+  const [profileImage, setProfileImage] = useState(profile_img);
   const [name, setName] = useState(userName);
+
+  const log_out = () => {
+    const token = localStorage.getItem("user_token");
+    axios
+      .post(`http://socarm/api.php?action=log_out&token=${token}`)
+      .then((res) => {
+        res.data.success && window.location.reload();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  const update_data = () => {
+    axios
+      .post(
+        `http://socarm/api.php?action=update_data&user_id=${id}&nickname=${name}&profile_img=${profileImage}`
+      )
+      .then((res) => {
+        res.data.success && window.location.reload();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <div className="settings-panel">
@@ -48,8 +71,18 @@ const UserSettings = ({ userName, onClose }) => {
           value={name}
           onChange={(evn) => setName(evn.target.value)}
         />
-        {console.log(profileImage)}
-        <button>Сохранить</button>
+        <button type="submit" className="save-btn" onClick={() => update_data()}>
+          Сохранить
+        </button>
+        <button
+          className="log-out"
+          onClick={(evn) => {
+            evn.preventDefault();
+            log_out();
+          }}
+        >
+          Выйти
+        </button>
       </div>
     </div>
   );

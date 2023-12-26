@@ -42,8 +42,13 @@
     height: 45px;
     border: none;
     color: #fff;
-    background: rgb(2, 92, 2);
     border-radius: 10px;
+}
+.save-btn {
+    background: green;
+}
+.log-out {
+    background: red;
 }
 .icon-box {
     border-radius: 50%;

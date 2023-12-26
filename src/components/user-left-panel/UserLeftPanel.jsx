@@ -2,15 +2,21 @@ import React from "react";
 import { FaHatCowboy } from "react-icons/fa6";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { FaCircleInfo } from "react-icons/fa6";
-import { Link } from "react-router-dom";
 import { TbSettings } from "react-icons/tb";
+import { BiMoney } from "react-icons/bi";
 
-const UserLeftPanel = ({onOpenSettings}) => {
+const UserLeftPanel = ({ onOpenSettings, data }) => {
+
   return (
     <div className="user-left-panel">
       <div className="profile-data">
-        <img src="https://www.011global.com/Account/Slices/user-anonymous.png" />
-        <b>Username</b>
+        <img src={data.profile_img} />
+        <b>{data.nickname}</b>
+      </div>
+      <div style={{ color: "#fff", textAlign: "center" }}>
+        <b>
+          Баланс - {data.balance} <BiMoney />
+        </b>
       </div>
       <div className="panel-btns">
         <button>

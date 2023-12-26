@@ -1,19 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import "./signin-form.css";
 import { useForm } from "react-hook-form";
 import { MdClose } from "react-icons/md";
 import logo from "../../img/logo+name.svg";
 import GoogleAuth from "../google-auth/GoogleAuth";
+import axios from "axios";
 
-const SignInForm = ({onSwitch}) => {
+const SignInForm = ({ onSwitch }) => {
   const {
     handleSubmit,
     formState: { errors },
     register,
   } = useForm();
 
+  const [errorMessage, setErrorMessage] = useState(null);
+
   const onSubmit = (data) => {
-    console.log(data);
+    axios
+      .post(`http://socarm/api.php?action=signin&email=${data["email"]}&password=${data["password"]}`, data)
+      .then((res) => {
+        console.log(res)
+        if (res.data.success) {
+          localStorage.setItem("user_token", res.data.token)
+          window.location.reload()
+        } else {
+          setErrorMessage("Неправильный логин или пароль !");
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
@@ -39,9 +55,12 @@ const SignInForm = ({onSwitch}) => {
           }
         }
       />
-      <button>Вход</button>
+      <button type="submit">Вход</button>
       <GoogleAuth />
-      <b onClick={() => onSwitch()} className="form-type">Создать аккаунт</b>
+      <b onClick={() => onSwitch()} className="form-type">
+        Создать аккаунт
+      </b>
+      <p style={{ color: "#EB4C42FF" }}>{errorMessage}</p>
     </form>
   );
 };
