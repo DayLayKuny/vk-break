@@ -5,13 +5,16 @@
   background: none;
   z-index: 5;
   display: flex;
-  justify-content: center;
+  gap: 25px;
+  align-items: center;
+  flex-direction: column;
   background: black;
 }
 
 .loader {
   margin: 50px;
 }
+
 
 /* 
 .loader {
@@ -68,4 +71,36 @@
 
 .dot3 {
   background-color: green;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 100%;
+  text-align: left;
+  position: absolute;
+  font-weight: bold;
+  font-family: monospace;
+  text-shadow: 
+    0 0 0 rgb(255 0 0), 
+    0 0 0 rgb(0 255 0), 
+    0 0 0 rgb(0 0 255);
+  font-size: 30px;
+  animation: l32 1s infinite cubic-bezier(0.5,-2000,0.5,2000);
+}
+
+@keyframes l32{
+  25%,100% {
+  text-shadow: 
+     0.03px -0.01px 0.01px rgb(255 0 0), 
+     0.02px  0.02px 0     rgb(0 255 0), 
+    -0.02px  0.02px 0     rgb(0 0 255);
+  }
+}
+
+
+/* HTML: <div class="loader"></div> */
+
+.loader:before {
+  content:"Hacking!Hacking!Hacking!Hacking!Hacking!Hacking!Hacking!Hacking!Hacking!Hacking!Hacking!Hacking!Hacking!Hacking!Hacking!Hacking!Hacking!Hacking!Hacking!Hacking!";
+
 }

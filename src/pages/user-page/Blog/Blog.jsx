@@ -1,56 +1,58 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Blog.css";
 import { FaEye } from "react-icons/fa";
+import axios from "axios";
+import { FaCalendarDays } from "react-icons/fa6";
 
-function Blog () {
-    return (
-        <div className="all-blog">
-            <div className="downstream-blog">
-                <div className="text-info-blog">
-                    <h3>Наш новостной уголок</h3>
-                    <p>Здесь вы найдете самые свежие и интересные новости из разных областей жизни. Наша команда тщательно отбирает и анализирует новости, чтобы предоставить вам актуальную информацию и интересные материалы.</p>
-                </div>
-                <div className="main-news">
-                    <div className="news-item">
-                        <div className="down-main-news">
-                            <h4>Китайская Хакерская Группировка Storm-0558: Атака на Госдепартамент США и Ключевые Результаты Расследования</h4>
-                            <p>Расследование атаки китайской хакерской группировки Storm-0558 на Госдепартамент США: узнайте, как компрометация учетных записей Outlook и похищение ключа подписи MSA привели к утечке данных и как ведомство реагирует на инцидент. Подробный анализ произошедшего и меры по обеспечению кибербезопасности....</p>
-                        </div>
-                        <div className="down-info-news">
-                            <p>
-                                <FaEye  className="feye"/>
-                                {Math.floor(Math.random() * 1000)}
-                            </p>   
-                        </div>
-                    </div>
-                    <div className="news-item">
-                        <div className="down-main-news">
-                            <h4>Китайская Хакерская Группировка Storm-0558: Атака на Госдепартамент США и Ключевые Результаты Расследования</h4>
-                            <p>Расследование атаки китайской хакерской группировки Storm-0558 на Госдепартамент США: узнайте, как компрометация учетных записей Outlook и похищение ключа подписи MSA привели к утечке данных и как ведомство реагирует на инцидент. Подробный анализ произошедшего и меры по обеспечению кибербезопасности....</p>
-                        </div>
-                        <div className="down-info-news">
-                            <p>
-                                <FaEye  className="feye"/>
-                                {Math.floor(Math.random() * 1000)}
-                            </p>     
-                        </div>
-                    </div>
-                    <div className="news-item">
-                        <div className="down-main-news">
-                            <h4>Китайская Хакерская Группировка Storm-0558: Атака на Госдепартамент США и Ключевые Результаты Расследования</h4>
-                            <p>Расследование атаки китайской хакерской группировки Storm-0558 на Госдепартамент США: узнайте, как компрометация учетных записей Outlook и похищение ключа подписи MSA привели к утечке данных и как ведомство реагирует на инцидент. Подробный анализ произошедшего и меры по обеспечению кибербезопасности....</p>
-                        </div>
-                        <div className="down-info-news">
-                            <p>
-                                <FaEye  className="feye"/>
-                                {Math.floor(Math.random() * 1000)}
-                            </p>     
-                        </div>
-                    </div>
-                </div>
-            </div>
+function Blog() {
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    axios
+      .post("http://socarm/api.php?action=get_blogs")
+      .then((res) => {
+        setBlogs([...res.data.blogs]);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+  return (
+    <div className="all-blog">
+      <div className="downstream-blog">
+        <div className="text-info-blog">
+          <h3>Наш новостной уголок</h3>
+          <p>
+            Здесь вы найдете самые свежие и интересные новости из разных
+            областей жизни. Наша команда тщательно отбирает и анализирует
+            новости, чтобы предоставить вам актуальную информацию и интересные
+            материалы.
+          </p>
         </div>
-    )
+        <div className="main-news">
+          {blogs.map((el) => {
+            return (
+              <div className="news-item" key={el[0]}>
+                <div className="down-main-news">
+                  <h4>{el[3]}</h4>
+                  <p>{el[1]}</p>
+                </div>
+                <div className="down-info-news">
+                  <p>
+                    <FaEye className="feye" />
+                    {Math.floor(Math.random() * 1000)}
+                  </p>
+                  <p>
+                    {el[2]}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Blog
+export default Blog;

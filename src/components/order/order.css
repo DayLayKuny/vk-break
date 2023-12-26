@@ -1,0 +1,24 @@
+.order {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+.all-orders {
+    width: 80%;
+    display: grid;
+    gap: 15px;
+}
+.view-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    color: #fff;
+    background: #8124CEFF;
+    max-height: 50px;
+}

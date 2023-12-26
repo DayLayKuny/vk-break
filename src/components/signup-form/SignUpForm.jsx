@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import logo from "../../img/logo+name.svg";
 import GoogleAuth from "../google-auth/GoogleAuth";
-import "./signup-form.css"
+import "./signup-form.css";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const SignUpForm = ({ onSwitch }) => {
+  let navigate = useNavigate();
+  const [errorMessage, setErrorMessage] = useState(null)
+
   const {
     handleSubmit,
     formState: { errors },
@@ -12,7 +17,23 @@ const SignUpForm = ({ onSwitch }) => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    axios
+      .post(
+        `http://socarm/api.php?action=signup&nickname=${data["nickname"]}&email=${data["email"]}&password=${data["password"]}`
+      )
+      .then((res) => {
+        console.log(res)
+        if (res.data.success) {
+          const customToken = res.data.token
+          localStorage.setItem('user_token', customToken)
+          window.location.reload()
+        }else {
+          setErrorMessage(true)
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="auth-form">
@@ -57,7 +78,7 @@ const SignUpForm = ({ onSwitch }) => {
           }
         }
       />
-      <button>Зарегистрироваться</button>
+      <button type="submit">Зарегистрироваться</button>
       <GoogleAuth />
       <p className="form-type">
         Уже есть аккаунт ?{" "}
@@ -65,8 +86,9 @@ const SignUpForm = ({ onSwitch }) => {
           Войти
         </b>
       </p>
+      {errorMessage && <p style={{ color: "#EB4C42FF"}}>Почта уже зарегистрирована !</p>}
     </form>
-  );    
+  );
 };
 
 export default SignUpForm;

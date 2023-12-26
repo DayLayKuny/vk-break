@@ -3,12 +3,13 @@ import "./AppHeader.css";
 import logo from "../../img/logo+name.svg";
 import { Link } from "react-router-dom";
 import AuthForm from "../auth-form/AuthForm";
+import { BiSolidUser } from "react-icons/bi";
+import { BiMoney } from "react-icons/bi";
 
-function AppHeader({ onOpen, open, onClose }) {
+function AppHeader({ onOpen, open, onClose, nickname, profile_img, balance }) {
   return (
     <>
-    {console.log(open)}
-      {open && <AuthForm onClose={() => onClose()}/>}
+      {open && <AuthForm onClose={() => onClose()} />}
       <div className="all-header">
         <div className="downstream-header container">
           <Link to={"/"}>
@@ -19,10 +20,26 @@ function AppHeader({ onOpen, open, onClose }) {
             <Link to="/faq">FAQ</Link>
             <Link to="/support">Поддержка</Link>
             <Link to="/blog">Блог</Link>
-            <Link to="/user">User</Link>
           </div>
           <div className="login-div">
-            <button onClick={() => onOpen()}>Вход / Регистрация</button>
+            {nickname ? (
+              <Link to={"/user"} style={{ textDecoration: "none" }}>
+                <div className="user_link">
+                  <img
+                    src={profile_img}
+                    height={"65px"}
+                    width={"65px"}
+                    className="prf_img"
+                  />
+                  <div style={{display: 'grid'}}>
+                    <span className="user_data">{nickname}</span>
+                    <span className="user_data">{balance} <BiMoney /></span>
+                  </div>
+                </div>
+              </Link>
+            ) : (
+              <button onClick={() => onOpen()}>Вход / Регистрация</button>
+            )}
           </div>
           <LeftMenu id="left-menu" onOpen={() => onOpen()} />
         </div>
